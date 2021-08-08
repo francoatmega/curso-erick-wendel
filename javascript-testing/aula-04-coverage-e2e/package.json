@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mocha": "8",
+    "nyc": "15",
+    "supertest": "6"
+  },
+  "scripts": {
+    "test": "npx mocha -w *.test.js",
+    "test:cov": "npx nyc npx mocha --parallel *.test.js"
+  }
+}
