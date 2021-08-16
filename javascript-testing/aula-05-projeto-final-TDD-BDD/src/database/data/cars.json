@@ -1,0 +1,23 @@
+[
+ {
+  "id": "49ca2763-718d-4537-8b9d-a8b71ed01975",
+  "name": "Malibu",
+  "releaseYear": 2021,
+  "available": true,
+  "gasAvailable": true
+ },
+ {
+  "id": "24d2d53b-b22d-4af4-a0cb-faac0e07ca43",
+  "name": "Focus",
+  "releaseYear": 2021,
+  "available": true,
+  "gasAvailable": true
+ },
+ {
+  "id": "90d4ac52-7044-453b-805f-eb7fb3520ba6",
+  "name": "Expedition",
+  "releaseYear": 2020,
+  "available": true,
+  "gasAvailable": true
+ }
+]

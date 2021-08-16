@@ -1,0 +1,20 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "mocha": "8",
+    "nyc": "15",
+    "sinon": "9"
+  },
+  "scripts": {
+    "test": "npx mocha -w *.test.js",
+    "test:cov": "npx nyc npx mocha --parallel *.test.js",
+    "seed": "node ./database/seed"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
+}

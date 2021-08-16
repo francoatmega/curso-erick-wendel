@@ -1,0 +1,13 @@
+​​# Story: Renting a car
+
+## Use Case 01
+
+As a system user
+
+In order to get an available car in a specific category
+
+Given a car category containing 3 different cars
+
+When I check if there's a car available
+
+Then it should choose randomly a car from the category chosen
