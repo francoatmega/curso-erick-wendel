@@ -4,17 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "chai": "4",
     "faker": "^5.5.3",
     "mocha": "8",
     "nyc": "15",
     "sinon": "9"
   },
   "scripts": {
-    "test": "npx mocha -w *.test.js",
-    "test:cov": "npx nyc npx mocha --parallel *.test.js",
+    "test": "npx mocha -w test/**/*.test.js",
+    "test:cov": "npx nyc npx mocha --parallel test/**/*.test.js",
     "seed": "node ./database/seed"
-  },
-  "dependencies": {
-    "dotenv": "^10.0.0"
   }
 }
