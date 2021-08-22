@@ -7,5 +7,6 @@
     "reporter": [
         "text",
         "html"
-    ]
+    ],
+    "exclude": "database"
 }
