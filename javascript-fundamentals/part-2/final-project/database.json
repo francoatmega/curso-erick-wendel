@@ -1,0 +1,9 @@
+[
+    {
+        "id": "1",
+        "vehicles": ["Motorcyle", "Car", "Truck"],
+        "kmTraveled": "9543",
+        "from": "2001-10-01",
+        "to": "2021-09-24"
+    }
+]

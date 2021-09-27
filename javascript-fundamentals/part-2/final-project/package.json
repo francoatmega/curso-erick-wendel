@@ -1,7 +1,11 @@
 {
+  "type": "module",
   "dependencies": {
     "chalk": "4",
     "chalk-table": "1",
     "draftlog": "^1.0.13"
+  },
+  "scripts": {
+    "start": "nodemon --experimental-json-modules src/index.js"
   }
 }
