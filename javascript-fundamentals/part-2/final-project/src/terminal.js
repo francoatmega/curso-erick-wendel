@@ -21,11 +21,21 @@ export default class Terminal {
     }
 
     initTable(database, language) {
-        this.data = chalkTable(
+        this.data = database.map(val => new Person(val).transform(language))
+        this.print = chalkTable(
             this.getTableOptions(), 
-            database.map(val => new Person(val).transform(language))
+            this.data
         )
-        console.draft(this.data)
+        console.draft(this.print)
+    }
+
+    updateTable(item) {
+        this.data.push(item)
+        this.print = chalkTable(
+            this.getTableOptions(), 
+            this.data
+        )
+        console.draft(this.print)
     }
 
     getTableOptions() {
