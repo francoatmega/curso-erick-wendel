@@ -13,13 +13,12 @@ terminal.initTable(db, LANGUAGE)
 
 const mainLoop = async () => {
   try {
-    const answer = await terminal.question('Please, type yoru data: ')
-    if(answer === QUIT_TERMINAL) terminal.closeTerminal()
+    const answer = await terminal.question('Please, type your data: ')
+    if(answer === QUIT_TERMINAL) return terminal.closeTerminal()
     const person = Person.fromString(answer)
-    console.log(person.transform())
+    terminal.updateTable(person.transform())
   } catch (err) {
     console.log(chalk.inverse.red('Error: ', err.message))
-  } finally {
     return mainLoop()
   }
 }
