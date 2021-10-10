@@ -1,15 +1,18 @@
 {
   "type": "module",
   "dependencies": {
+    "chai": "4",
     "chalk": "4",
     "chalk-table": "1",
-    "draftlog": "^1.0.13"
+    "draftlog": "^1.0.13",
+    "reify": "^0.20.12"
   },
   "scripts": {
-    "start": "nodemon --experimental-json-modules src/index.js"
+    "start": "nodemon --experimental-json-modules src/index.js",
+    "test": "node --experimental-modules node_modules/mocha/bin/_mocha \"tests/**/*.spec.js\"",
+    "test:cov": "nyc node --experimental-modules node_modules/mocha/bin/_mocha -r reify \"tests/**/*.spec.js\""
   },
   "devDependencies": {
-    "chai": "4",
     "mocha": "8",
     "nyc": "15",
     "sinon": "9"
