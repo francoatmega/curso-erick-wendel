@@ -18,10 +18,10 @@ export default class Person {
                 .format(this.kmTraveled),
             from: new Intl
                 .DateTimeFormat(language, { month: 'long', day: '2-digit', year: 'numeric'})
-                .format(new Date(this.from)),
+                .format(new Date(`${this.from} 00:00:00`)),
             to: new Intl
                 .DateTimeFormat(language, { month: 'long', day: '2-digit', year: 'numeric'})
-                .format(new Date(this.to))
+                .format(new Date(`${this.to} 00:00:00`))
         }
     }
 
