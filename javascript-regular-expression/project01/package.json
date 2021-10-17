@@ -6,10 +6,11 @@
   },
   "scripts": {
     "start": "nodemon src/index.js",
-    "test": "mocha tests/**/*.spec.js",
+    "test": "mocha -w tests/**/*.spec.js",
     "test:cov": "nyc mocha tests/**/*.spec.js"
   },
   "dependencies": {
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "safe-regex": "^2.1.1"
   }
 }
