@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "chai": "4",
+    "mocha": "8",
+    "nyc": "15"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "mocha tests/**/*.spec.js",
+    "test:cov": "nyc mocha tests/**/*.spec.js"
+  }
+}
