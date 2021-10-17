@@ -77,4 +77,72 @@ describe('Test of TextProcessor class', () => {
         const result = new TextProcessor(content).stripString().build()
         expect(result).to.be.an('array').deep.include(expected)
     })
+    it('should convert each hirer or hire into Person object', () => {
+        const content = [
+            [
+              'Xuxa da Silva',
+              'brasileira',
+              'casada',
+              'CPF 235.743.420-12',
+              'residente e domiciliada a Rua dos bobos',
+              'zero',
+              'bairro Alphaville',
+              'São Paulo.'
+            ],
+            [
+              'Arya Robbin',
+              'belga',
+              'casado',
+              'CPF 884.112.200-52',
+              'residente e domiciliada a Av. paulista',
+              '1400',
+              'bairro Consolação',
+              'São Paulo.'
+            ],
+            [
+              'Júlia Menezes',
+              'brasileira',
+              'solteira',
+              'CPF 297.947.800-81',
+              'residente e domiciliada a Av. dos Estados',
+              '99',
+              'bairro Jardins',
+              'São Paulo.'
+            ]
+        ]
+        const expectPersons = [
+            {
+                nome: 'Xuxa da Silva',
+                nacionalidade: 'Brasileira',
+                estadoCivil: 'Casada',
+                CPF: '23574342012',
+                rua: 'Rua dos bobos',
+                numero: 'zero',
+                bairo: 'Alphaville',
+                estado: 'São Paulo'
+            },
+            {
+                nome: 'Arya Robbin',
+                nacionalidade: 'Belga',
+                estadoCivil: 'Casado',
+                CPF: '88411220052',
+                rua: 'Av. paulista',
+                numero: '1400',
+                bairo: 'Consolação',
+                estado: 'São Paulo'
+            },
+            {
+                nome: 'Júlia Menezes',
+                nacionalidade: 'Brasileira',
+                estadoCivil: 'Solteira',
+                CPF: '29794780081',
+                rua: 'Av. dos Estados',
+                numero: '99',
+                bairo: 'Jardins',
+                estado: 'São Paulo'
+            }
+        ]
+        const result = new TextProcessor(content).mapPerson().build()
+        expect(result).to.be.an('array').deep.equal(expectPersons)
+    })
 }) 
